@@ -11,8 +11,8 @@ import java.util.function.Function;
 public class DemoApplication {
 
 	@Bean
-	Function<Flux<String>, Flux<String>> uppercase() {
-		return incomingFlux -> incomingFlux.map(String::toUpperCase);
+	Function<String, String> uppercase() {
+		return String::toUpperCase;
 	}
 
 	public static void main(String[] args) {
